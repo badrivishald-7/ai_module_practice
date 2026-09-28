@@ -30,7 +30,7 @@ def ask(messages, system_prompt):
     full_messages.extend(messages)
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="openai/gpt-oss-120b",
         messages=full_messages,
         temperature=0.3,  # low = more focused, less random answers
         max_tokens=400,   # limits the length of the reply
